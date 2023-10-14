@@ -109,4 +109,10 @@ body {
   .card--dark {
     border-radius: 0rem 1rem 1rem 0rem;
   }
+  .card__button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--Very-light-gray);
+    color: var(--Very-light-gray);
+  }
 }
