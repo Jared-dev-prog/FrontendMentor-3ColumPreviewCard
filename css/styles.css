@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  /* Primary */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+
+  --Font-family1: "Big Shoulders Display", sans-serif;
+  --Font-family2: "Lexend Deca", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  background-color: var(--Very-light-gray);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  max-width: 350px;
+  margin: 2rem auto;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.card {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.card--orange {
+  background-color: var(--Bright-orange);
+  border-radius: 1rem 1rem 0rem 0rem;
+}
+.card__icon {
+  width: 5rem;
+}
+.card__title {
+  color: var(--Very-light-gray);
+  font-family: var(--Font-family1);
+}
+.card__text {
+  font-family: var(--Font-family2);
+  color: var(--Very-light-gray);
+  opacity: 0.8;
+  line-height: 1.5;
+  width: 85%;
+}
+.card__button {
+  border: unset;
+  border-radius: 3rem;
+  flex-basis: 5rem;
+  width: 15rem;
+}
+.card__button--orange {
+  color: var(--Bright-orange);
+}
+
+.card--cyan {
+  background-color: var(--Dark-cyan);
+}
+.card__button--cyan {
+  color: var(--Very-dark-cyan);
+}
+
+.card--dark {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0rem 0rem 1rem 1rem;
+}
+.card__button--dark {
+  color: var(--Very-dark-cyan);
+}
+
+@media (min-width: 768px) {
+  body {
+    max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .container {
+    width: 100%;
+    flex-direction: row;
+  }
+  .card--orange {
+    border-radius: 1rem 0rem 0rem 1rem;
+  }
+  .card--dark {
+    border-radius: 0rem 1rem 1rem 0rem;
+  }
+}
